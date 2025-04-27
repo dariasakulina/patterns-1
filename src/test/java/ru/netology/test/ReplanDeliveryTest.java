@@ -15,10 +15,14 @@ import static com.codeborne.selenide.Selenide.open;
     class ReplanDeliveryTest {
 
         @BeforeAll
-        static void setUpAll() { SelenideLogger.addListener("allure", new AllureSelenide()); }
+        static void setUpAll() {
+            SelenideLogger.addListener("allure", new AllureSelenide());
+        }
 
         @AfterAll
-        static void tearDownAll() { SelenideLogger.removeListener("allure"); }
+        static void tearDownAll() {
+            SelenideLogger.removeListener("allure");
+        }
 
         @BeforeEach
         void setup() {
