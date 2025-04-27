@@ -1,7 +1,9 @@
 package ru.netology.test;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
+import io.qameta.allure.*;
 import org.openqa.selenium.Keys;
 import ru.netology.data.DataGenerator;
 
