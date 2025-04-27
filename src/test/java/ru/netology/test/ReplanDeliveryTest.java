@@ -1,8 +1,7 @@
 package ru.netology.test;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.Keys;
 import ru.netology.data.DataGenerator;
 
@@ -14,6 +13,12 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
     class ReplanDeliveryTest {
+
+        @BeforeAll
+        static void setUpAll() { SelenideLogger.addListener("allure", new AllureSelenide()); }
+
+        @AfterAll
+        static void tearDownAll() { SelenideLogger.removeListener("allure"); }
 
         @BeforeEach
         void setup() {
